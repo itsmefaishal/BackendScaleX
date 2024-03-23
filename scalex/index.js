@@ -1,11 +1,9 @@
 const express = require("express");
-const path = require('path');
 const app = express();
 const cors = require("cors");
 const mongoose = require("mongoose");
 const tokenRoutes = require("./routes/tokens.routes");
-const envPath = path.join(__dirname, '../.env');
-require("dotenv").config({path : envPath});
+require("dotenv").config();
 const uri = process.env.APP_URL;
 
 app.use(cors());
