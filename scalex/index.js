@@ -19,7 +19,7 @@ app.listen(3000, () => {
 });
 
 mongoose
-  .connect(uri)
+  .connect(`${uri}`)
   .then(() => {
     console.log("connected to mongodb atlas");
   })
